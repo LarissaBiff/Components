@@ -13,7 +13,7 @@
         <button class="btn btn-excluir">Excluir</button>
       </div>
       <div>
-        <buttonChild :nome="'Novo'" :tipo="'btn'" :acao="'btn-novo'"> </buttonChild>
+        <buttonChild :nome="'Novo'" :tipo="'btn'" :acao="'btn-novo'"> Novo </buttonChild>
       </div>
   </div>
 </template>
