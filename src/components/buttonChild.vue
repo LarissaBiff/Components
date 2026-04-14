@@ -1,12 +1,17 @@
 <script setup>
     defineProps(['nome', 'tipo', 'acao'])
+    defineEmits(['clique'])
 </script>
 
 
 <template>
-    <button :class="[tipo, acao]">
+    <button :class="[tipo, acao]"
+    @click.prevent="$emit( 'clique', nome)"
+    >
         <slot></slot>
     </button>
+
+    
 </template>
 
 
@@ -25,5 +30,25 @@
 .btn-novo {
   background-color: white;
   color: rgb(179, 46, 68);
+}
+
+.btn-editar {
+  background-color: rgb(179, 77, 46);
+  color:  white;
+}
+.btn-salvar {
+  background-color:  rgb(50, 138, 57); 
+  color: white;
+}
+.btn-cancelar {
+  background-color:  rgb(46, 48, 179);
+  color: white;
+}
+.btn-excluir {
+  background-color: rgb(179, 46, 68);
+  color:  white;
+}
+.btn button {
+  cursor: pointer;
 }
 </style>
