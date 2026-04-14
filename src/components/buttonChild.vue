@@ -5,7 +5,7 @@
 
 <template>
     <button :class="[tipo, acao]">
-        {{ nome }}
+        <slot></slot>
     </button>
 </template>
 
